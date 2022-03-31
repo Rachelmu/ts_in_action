@@ -1,0 +1,1 @@
+(()=>{"use strict";var r={694:()=>{Symbol(),Symbol()}},e={};function t(o){var p=e[o];if(void 0!==p)return p.exports;var l=e[o]={exports:{}};return r[o](l,l.exports,t),l.exports}t(694),document.querySelectorAll(".app")[0].innerHTML="Hello TypeScript"})();
