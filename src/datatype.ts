@@ -3,6 +3,11 @@ let bool: boolean = true
 let num: number = 123
 let str: string = 'abc'
 // str = 123
+const binary: number = 0b110
+// console.log(binary)
+const bo = true
+console.log(typeof bo)
+
 
 // 数组
 let arr1: number[] = [1,2,4]
@@ -58,6 +63,6 @@ let error = () => {
 
 let endless = () => {
     while(true){
-        
+
     }
 }
