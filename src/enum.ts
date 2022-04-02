@@ -57,7 +57,7 @@ let e3: E.a
 
 let g1: G
 let g2: G.a
-
+let g: G
 
 
 
