@@ -41,7 +41,22 @@ const enum Month {
 
 let month = [Month.Jan, Month.Feb, Month.Mar]
 
+// 枚举类型
+enum E { a, b }
+enum F { a = 0, b = 1 }
+enum G { a = 'apple', b = 'banana'}
 
+// 枚举成员相同才能比较
+let e : E = 3
+let f : F = 3
+console.log(e)
+let e1: E.a
+let e2: E.b
+let e3: E.a
+
+
+let g1: G
+let g2: G.a
 
 
 
