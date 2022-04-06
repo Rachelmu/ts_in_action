@@ -58,11 +58,37 @@ let e3: E.a
 let g1: G
 let g2: G.a
 
+// 接口
+interface List{
+    // 只读属性
+    readonly id: number,
+    name: string;
+    // 字符串索引签名
+    // [x: string]: any;
 
+    // 可选属性
+    age?: number
+}
+interface Result{
+    data: List[]
+}
+function render(result: Result){
+    result.data.forEach((value) => {
+        console.log(value.id, value.name)
+        if(value.age){
+            console.log(value.age)
+        }
+    })
+}
+let result = {
+    data: [
+        {id:1, name: 'A'},
+        {id:2, name: 'B'}
+    ]
+}
+render(result)
 
-
-
-
+// as Result类型断严 绕过类型检查  <Result>
 
 
 
