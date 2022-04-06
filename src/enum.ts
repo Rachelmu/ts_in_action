@@ -91,4 +91,14 @@ render(result)
 // as Result类型断严 绕过类型检查  <Result>
 
 
+// 数字索引接口
+interface StringArray{
+    [index: number]: String
+}
 
+let chars: StringArray = ['A', 'B']
+
+// 字符串索引接口
+interface Names{
+    [x: string]: string;
+}
