@@ -17,13 +17,13 @@ interface lib {
 }
 
 // 类型断言
-let lib: Lib = (() => {}) as lib;
+let lib: lib = (() => {}) as lib;
 lib.version = '1.0'
 lib.doSomething = () => {}
 
 // 函数封装单类
 function getLib(){
-    let lib: Lib = (() => {}) as lib;
+    let lib: lib = (() => {}) as lib;
     lib.version = '1.0'
     lib.doSomething = () => {}
     return lib;
