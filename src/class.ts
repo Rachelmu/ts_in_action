@@ -1,6 +1,7 @@
 // 类成员的属性都是实例属性，方法都是实例方法
 class Dog{
     // private私有成员熟悉，这个类既不能实例化，也不能被继承
+    // protected不能被实例化，只能被继承
     constructor(name: string){
         this.name = name
     }
@@ -11,6 +12,9 @@ class Dog{
 
     // 受保护成员，只能在类或者子类中访问
     protected pro(){}
+
+    // 只读属性
+    readonly legs: number = 4
 }
 
 // name属性只在实例上不在原型上，实例的属性必须具有初始值，或者在构造函数中被初始化
@@ -24,6 +28,10 @@ class Husky extends Dog{
     constructor(name:string, color:sting){
         super(name)
         this.color = color;
+
+        // 子类中受保护成员可以调用
+        this.pro()
+
     }
     color: string
 }
