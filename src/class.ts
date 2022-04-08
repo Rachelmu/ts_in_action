@@ -9,13 +9,15 @@ class Dog{
     // 私有成员 只能类的本身调用
     private pri(){}
 
-    // 受保护成员
+    // 受保护成员，只能在类或者子类中访问
+    protected pro(){}
 }
 
 // name属性只在实例上不在原型上，实例的属性必须具有初始值，或者在构造函数中被初始化
 console.log(Dog.prototype)
 let dog = new Dog('wangwang')
 console.log(dog) 
+// dog.pro()
 
 // 类的继承
 class Husky extends Dog{
