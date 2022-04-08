@@ -13,8 +13,11 @@ class Dog{
     // 受保护成员，只能在类或者子类中访问
     protected pro(){}
 
-    // 只读属性
+    // 只读属性.不能更改，要初始化
     readonly legs: number = 4
+
+    // 类的静态成员，只能通过类名来调用，而不能通过子类来调用
+    static food: string = 'bones'
 }
 
 // name属性只在实例上不在原型上，实例的属性必须具有初始值，或者在构造函数中被初始化
@@ -22,6 +25,8 @@ console.log(Dog.prototype)
 let dog = new Dog('wangwang')
 console.log(dog) 
 // dog.pro()
+console.log(Dog.food)
+
 
 // 类的继承
 class Husky extends Dog{
