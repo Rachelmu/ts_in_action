@@ -47,3 +47,13 @@ function addFn8(...rest:any[]):any{
 }
 console.log(addFn8(1,2,3))
 console.log(addFn8('a','b','c'))
+
+
+// arguments
+// js方法并不安全
+// function sumVariadic(): number{
+//     return Array
+//         .from(arguments)
+//         .reduce((total, n) => total + n , 0)
+// }
+// console.log('arguments', sumVariadic(1,2,3))
