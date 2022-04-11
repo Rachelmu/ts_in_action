@@ -18,7 +18,7 @@ class Dog{
 
     // 类的静态成员，只能通过类名来调用，可以继承，而不能通过子类来调用
     static food: string = 'bones'
-    
+
 }
 
 // name属性只在实例上不在原型上，实例的属性必须具有初始值，或者在构造函数中被初始化
@@ -41,3 +41,22 @@ class Husky extends Dog{
     }
     color: string
 }
+
+
+// 抽象类
+// 只能被继承 不能被实例化的类
+abstract class Animal{
+    eat(){
+        console.log('eat')
+    }
+}
+class Cat extends Animal{
+    constructor(name: string){
+        super()
+        this.name =name
+    }
+    name: string
+    run() {}
+}
+let cat = new Cat('miaomiao')
+cat.eat()
