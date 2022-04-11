@@ -45,10 +45,12 @@ class Husky extends Dog{
 
 // 抽象类
 // 只能被继承 不能被实例化的类
+// 不指定方法的实现,抽象方法，好处：子类有明确的实现，没有必要在父类实现，可以抽离出事物的共性
 abstract class Animal{
     eat(){
         console.log('eat')
     }
+    abstract sleep(): void
 }
 class Cat extends Animal{
     constructor(name: string){
@@ -57,6 +59,9 @@ class Cat extends Animal{
     }
     name: string
     run() {}
+    sleep() {
+        console.log('cat sleep')
+    }
 }
 let cat = new Cat('miaomiao')
 cat.eat()
