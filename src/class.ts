@@ -67,3 +67,32 @@ let cat = new Cat('miaomiao')
 cat.eat()
 
 // 多态
+class CatA extends Animal{
+    sleep() {
+        console.log('Cat sleep')
+    }
+}
+let cat1 = new CatA()
+
+let animals: Animal[] = [cat, cat1]
+animals.forEach(i => {
+    i.sleep()
+})
+
+// this
+class WorkFlow {
+    step1(){
+        return this;
+    }
+    step2(){
+        return this;
+    }
+}
+new WorkFlow().step1().step2()
+
+class MyFlow extends WorkFlow{
+    next(){
+        return this
+    }
+}
+new MyFlow().next().step1().next().step2()
