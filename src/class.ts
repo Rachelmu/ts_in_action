@@ -45,7 +45,7 @@ class Husky extends Dog{
 
 // 抽象类
 // 只能被继承 不能被实例化的类
-// 不指定方法的实现,抽象方法，好处：子类有明确的实现，没有必要在父类实现，可以抽离出事物的共性
+// 不指定方法的实现,抽象方法，好处：子类有明确的实现，没有必要在父类实现，可以抽离出事物的共性，有利于代码的复用。还可以实现多态
 abstract class Animal{
     eat(){
         console.log('eat')
@@ -65,3 +65,5 @@ class Cat extends Animal{
 }
 let cat = new Cat('miaomiao')
 cat.eat()
+
+// 多态
