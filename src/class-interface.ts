@@ -34,3 +34,23 @@ let boy: Boy ={
     eat() {},
     cry() {}
 }
+
+class Auto {
+    state = 1
+    // private state2 = 0
+}
+interface AutoInterface extends Auto {
+
+}
+class C implements AutoInterface {
+    state = 1
+}
+
+class Bus extends Auto implements AutoInterface {
+
+}
+
+// 接口之间相互继承 extends
+// 类之间也可以相互继承
+// 接口通过类来实现。但是接口只能约束类的公有成员 implements
+// 接口可以抽离出类的成员 extends(public,private,protected)
