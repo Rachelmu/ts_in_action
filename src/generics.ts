@@ -32,3 +32,13 @@ let log1 = new LogClass<number>()
 log1.run(1)
 let log2 = new LogClass()
 log2.run('1')
+
+// 类型约束
+interface Length{
+    length: number
+}
+function log3<T extends Length>(value: T): T {
+    console.log(value, value.length);
+    return value;
+}
+log3('1')
