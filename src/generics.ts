@@ -19,3 +19,16 @@ interface Log2<T = string> {
 }
 let myLog2: Log2<number> = log
 // myLog2('1')
+
+// 泛型类约束
+// 泛型不能应用于类的静态成员
+class LogClass<T>{
+    run(value:T){
+        console.log(value)
+        return value
+    }
+}
+let log1 = new LogClass<number>()
+log1.run(1)
+let log2 = new LogClass()
+log2.run('1')
