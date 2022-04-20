@@ -51,9 +51,9 @@ let nu: null = null
 let noReturn = () => {}
 
 // any 与js一样
-let x
-x = 1
-x = []
+// let x
+// x = 1
+// x = []
 
 
 // never
