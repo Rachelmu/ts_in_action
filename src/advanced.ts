@@ -63,3 +63,15 @@ let advC = (...agrs:number[]) => {}
 // 2)参数类型
 let handler3 = (a:string) => {}
 // hof(handler3)
+
+interface Point3D {
+    x:number;
+    y:number;
+    z:number;
+}
+interface Point2D {
+    x: number;
+    y: number;
+}
+let p3d = (point: Point3D) => {};
+let p2d = (point: Point2D) => {};
