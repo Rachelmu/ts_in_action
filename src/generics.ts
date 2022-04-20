@@ -1,3 +1,7 @@
+// 泛型好处
+// 函数和类可以轻松地支持多种类型，增强程序的扩展性
+// 不必写多条函数重载，冗长的联合类型声明，增强代码可读性
+// 灵活控制类型之间的约束
 function log<T>(value: T): T {
     console.log(value);
     return value;
